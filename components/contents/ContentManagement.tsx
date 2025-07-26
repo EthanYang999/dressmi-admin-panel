@@ -134,6 +134,9 @@ export function ContentManagement() {
           user_showcase: { color: 'green', text: '用户作品' }
         }
         const config = typeConfig[type as keyof typeof typeConfig]
+        if (!config) {
+          return <Tag color="default">{type}</Tag>
+        }
         return <Tag color={config.color}>{config.text}</Tag>
       }
     },

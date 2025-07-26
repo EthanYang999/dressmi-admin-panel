@@ -48,10 +48,10 @@ export function PopularContentsList({ data }: PopularContentsListProps) {
               <div className="flex items-center justify-between">
                 <span className="font-medium truncate mr-2">{item.title}</span>
                 <Tag 
-                  color={CONTENT_TYPE_CONFIG[item.content_type].color}
+                  color={CONTENT_TYPE_CONFIG[item.content_type]?.color || 'default'}
                   className="text-xs"
                 >
-                  {CONTENT_TYPE_CONFIG[item.content_type].label}
+                  {CONTENT_TYPE_CONFIG[item.content_type]?.label || item.content_type}
                 </Tag>
               </div>
             }
