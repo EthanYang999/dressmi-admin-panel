@@ -1,0 +1,39 @@
+{
+  "name": "dressmi-admin-panel",
+  "version": "1.0.0",
+  "description": "等待内容管理后台系统",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3001",
+    "build": "next build",
+    "start": "next start -p 3001",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "^14.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "@supabase/supabase-js": "^2.38.0",
+    "@supabase/auth-helpers-nextjs": "^0.8.0",
+    "antd": "^5.12.0",
+    "lucide-react": "^0.294.0",
+    "react-query": "^3.39.0",
+    "axios": "^1.6.0",
+    "dayjs": "^1.11.0",
+    "recharts": "^2.8.0",
+    "react-hot-toast": "^2.4.0",
+    "react-dropzone": "^14.2.0",
+    "clsx": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^14.0.0",
+    "typescript": "^5.0.0",
+    "tailwindcss": "^3.3.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0"
+  }
+}

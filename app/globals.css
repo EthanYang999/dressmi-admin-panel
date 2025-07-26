@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 全局样式 */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+/* Ant Design 样式覆盖 */
+.ant-layout {
+  min-height: 100vh;
+}
+
+.ant-layout-sider {
+  box-shadow: 2px 0 8px 0 rgba(29, 35, 41, 0.05);
+}
+
+.ant-menu {
+  border-right: none;
+}
+
+.ant-layout-header {
+  padding: 0 24px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+}
+
+.ant-layout-content {
+  padding: 24px;
+  background: #f5f5f5;
+}
+
+/* 自定义组件样式 */
+.content-card {
+  @apply bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6;
+}
+
+.stats-card {
+  @apply bg-white rounded-lg shadow-sm border border-gray-200 p-6 text-center;
+}
+
+.stats-number {
+  @apply text-3xl font-bold text-gray-900 mb-2;
+}
+
+.stats-label {
+  @apply text-sm text-gray-600;
+}
+
+.image-upload-area {
+  @apply border-2 border-dashed border-gray-300 rounded-lg p-8 text-center cursor-pointer transition-colors hover:border-blue-400 hover:bg-blue-50;
+}
+
+.image-preview {
+  @apply relative inline-block mr-2 mb-2;
+}
+
+.image-preview img {
+  @apply w-20 h-20 object-cover rounded border;
+}
+
+.image-preview-remove {
+  @apply absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs cursor-pointer hover:bg-red-600;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .ant-layout-content {
+    padding: 16px;
+  }
+}
+
+/* 加载状态 */
+.loading-skeleton {
+  @apply animate-pulse bg-gray-200 rounded;
+}
+
+/* 拖拽排序 */
+.sortable-item {
+  @apply cursor-move transition-shadow hover:shadow-md;
+}
+
+.sortable-item.dragging {
+  @apply opacity-50;
+}
+
+/* 成功/错误状态 */
+.status-active {
+  @apply text-green-600 bg-green-100 px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.status-inactive {
+  @apply text-red-600 bg-red-100 px-2 py-1 rounded-full text-xs font-medium;
+}
+
+/* 内容类型标签 */
+.content-type-styling {
+  @apply bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-medium;
+}
+
+.content-type-trend {
+  @apply bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs font-medium;
+}
+
+.content-type-showcase {
+  @apply bg-green-100 text-green-800 px-2 py-1 rounded text-xs font-medium;
+}
